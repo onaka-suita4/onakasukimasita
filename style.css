@@ -1,0 +1,69 @@
+body {
+  font-family: "Arial Rounded MT", "Hiragino Sans", sans-serif;
+  background: linear-gradient(135deg, #e6f7ff, #ffe6f2);
+  text-align: center;
+  padding: 30px;
+}
+
+.app {
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  color: #6a4cff;
+}
+
+.selectors {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+select {
+  width: 48%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #c8b6ff;
+  background: #fff;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ffb6d9;
+  color: #5a1a3d;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* 吹き出し（色はJSで変更） */
+.bubble {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background 0.4s ease;
+}
+
+/* しっぽ（色も連動） */
+.bubble:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px 10px 0 10px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  transition: border-color 0.4s ease;
+}
